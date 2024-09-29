@@ -22,7 +22,7 @@ Size of the tuple: 48
 
 Size of the list: 72
 
-A tuple takes less memory (48 bytes) compared to a list (80 bytes).
+A tuple takes less memory (48 bytes) compared to a list (72 bytes).
 Lists require more memory because they are dynamic and capable of resizing.
 ## 2. C++: Array vs. Vector
 C++ Code:
