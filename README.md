@@ -4,8 +4,11 @@ This report presents an experiment comparing the memory usage of two fundamental
 ## 1. Python: Tuple vs. List
 ## Python Code:
 tpl = (1, 2, 3)
+
 print('Size of the tuple:', tpl.__sizeof__())
+
 lst = [1, 2, 3]
+
 print('Size of the list:', lst.__sizeof__())
 ## Explanation:
 Tuple: In Python, a tuple is immutable, meaning that once created, its elements cannot be modified. This immutability allows Python to optimize memory allocation for tuples.
@@ -16,23 +19,25 @@ __sizeof__() method: This method provides the size of the tuple or list object i
 
 ## Output:
 Size of the tuple: 48
+
 Size of the list: 72
+
 A tuple takes less memory (48 bytes) compared to a list (80 bytes).
 Lists require more memory because they are dynamic and capable of resizing.
 ## 2. C++: Array vs. Vector
 C++ Code:
-#include <iostream>
-#include <vector>
-using namespace std;
 
-int main() {
     // Static array (equivalent to Python's tuple)
+    
     int arr[3] = {1, 2, 3};
-    std::cout << "Size of the array: " << sizeof(arr) << " bytes\n";
+    
+    cout << "Size of the array: " << sizeof(arr) << " bytes\n";
 
     // Dynamic vector (equivalent to Python's list)
-    std::vector<int> vec = {1, 2, 3};
-    std::cout << "Size of the vector: " << sizeof(vec) << " bytes\n";
+    
+    vector<int> vec = {1, 2, 3};
+    
+    cout << "Size of the vector: " << sizeof(vec) << " bytes\n";
     
     return 0;
 }
@@ -44,10 +49,11 @@ Vector: Vectors are dynamic, meaning they can grow or shrink as needed. To enabl
 ## Output:
 
 Size of the array: 12 bytes
+
 Size of the vector: 24 bytes
 
-A C++ array consumes 12 bytes of memory (3 integers of 4 bytes each).
-A C++ vector consumes 24 bytes, more than the array, due to the overhead for dynamic resizing.
+C++ array consumes 12 bytes of memory (3 integers of 4 bytes each).
+C++ vector consumes 24 bytes, more than the array, due to the overhead for dynamic resizing.
 
 ## Conclusion:
 In both Python and C++, static data structures (tuple and array) use less memory than dynamic ones (list and vector), as dynamic structures reserve extra memory to allow future changes.
