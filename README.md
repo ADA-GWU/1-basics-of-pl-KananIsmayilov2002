@@ -1,32 +1,13 @@
 # TASK 1
 ## Investigation of Endianness: Big Endian vs. Little Endian
 ## Introduction
-Endianness refers to the order in which bytes are arranged within larger data types when stored in computer memory. The two primary types of endianness are big-endian and little-endian. Understanding endianness is crucial for system programming, data serialization, and network communications, as it can affect data interpretation across different platforms and architectures.
+Endianness is a concept in computing that refers to the way bytes are ordered within larger data types, like integers or floating-point numbers, when stored in memory. There are two primary types of endianness: big-endian and little-endian
 
 ## Big Endian
-In a big-endian system, the most significant byte (the "big end") of a multi-byte data type is stored at the lowest memory address. For example, the hexadecimal value 0x12345678 would be stored in memory as:
+In big-endian format, the most significant byte is stored at the smallest memory address. For instance, if we have a 32-bit integer like 0x12345678, the byte 0x12 would be stored first, followed by 0x34, 0x56, and finally 0x78. This ordering feels intuitive to many because it mirrors how we read numbers, starting from the left (most significant) and moving to the right (least significant).
 
-Address    Value
-0x00       0x12
-0x01       0x34
-0x02       0x56
-0x03       0x78
-Big-endian is commonly used in network protocols and some computer architectures (like SPARC and PowerPC), making it the default format for data transmission over networks.
-
-## Advantages of Big Endian
-Human Readability: The order of bytes matches the way humans read numbers, which can simplify debugging and data interpretation.
-
-Network Standards: Many network protocols use big-endian, ensuring consistency when transmitting data across different systems.
 ## Little Endian
-In a little-endian system, the least significant byte (the "little end") is stored at the lowest memory address. Using the same example, the value 0x12345678 would be stored as:
-
-
-Address    Value
-0x00       0x78
-0x01       0x56
-0x02       0x34
-0x03       0x12
-Little-endian is the predominant format used by x86 and x86-64 architectures, which power most personal computers and servers today.
+On the other hand, little-endian reverses this order. Using the same example, 0x78 would be stored first, then 0x56, 0x34, and finally 0x12. The least significant byte comes first in memory. While this may seem counterintuitive at first, there are some benefits. Little-endian can make certain mathematical operations, particularly those involving low-order bytes, slightly more efficient. This is because the least significant parts are processed first, which can lead to faster performance in specific scenarios. Little-endian is the predominant format used by x86 and x86-64 architectures, which power most personal computers and servers today.
 
 ## Advantages of Little Endian
 Ease of Incrementing: Little-endian makes it easier to increment multi-byte values, as the least significant byte is accessed first.
