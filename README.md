@@ -83,6 +83,21 @@ Size of the vector: 24 bytes
 C++ array consumes 12 bytes of memory (3 integers of 4 bytes each).
 C++ vector consumes 24 bytes, more than the array, due to the overhead for dynamic resizing.
 
+# Task 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Conclusion:
 In both Python and C++, static data structures (tuple and array) use less memory than dynamic ones (list and vector), as dynamic structures reserve extra memory to allow future changes.
 Python lists and C++ vectors are more flexible but come at the cost of higher memory consumption compared to tuples and arrays.
