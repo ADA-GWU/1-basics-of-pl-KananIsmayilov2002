@@ -88,11 +88,24 @@ In both Python and C++, static data structures (tuple and array) use less memory
 Python lists and C++ vectors are more flexible but come at the cost of higher memory consumption compared to tuples and arrays.
 This experiment demonstrates that choosing between static and dynamic data structures involves a trade-off between memory efficiency and flexibility.
 
-# Task 4
+# Task 4 Python
+## Flexibility:
+My solution is more flexible, because it allows the user to input the matrix dimensions and elements interactively. Chatgpt solution is less flexible as it gives a predefined matrix, focusing only on solution.
 
+## Readability:
+My solution is easier to understand for beginners due to loops and clear steps. In contrast, Chatgpt solution is more concise but uses list comprehensions which can reduce readability for those who are not  familiar with Python.
 
+## Efficiency:
+Chatgpt solution is more efficient, using Python’s built-in list slicing which is faster. My solution with nested loops is slower as it manually constructs the submatrix.
 
-
+# Task 4 C++
+## Flexibility:
+My solution is more flexible because it allows the user to input the number of rows and columns of the matrix. It also takes user input for the row and column indices which makes it adaptable to different matrix sizes and slicing ranges. Chatgpt solution is less flexible because the row and column indices are fixed in the function call. It lacks the ability to handle user-defined input without modification.
+## Readability:
+The explicit use of loops to extract submatrices makes the code easier to understand for beginners. However, it is slightly longer because of manual iteration and input handling.
+Chatgpt solution is more concise due to the use of iterators which reduces the number of lines. However, it might be less readable for beginners who are unfamiliar with iterators.
+## Efficiency:
+By using iterators Chatgpt solution takes advantage of C++'s built-in capabilities which makes it faster. It avoids the overhead of manually constructing submatrices element-by-element by reducing unnecessary operations.
 
 
 
