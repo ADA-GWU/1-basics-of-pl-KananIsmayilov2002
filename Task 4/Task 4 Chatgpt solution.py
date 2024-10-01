@@ -1,6 +1,6 @@
 # Chatgpt solution
-def select_submatrix(matrix, start_row_index, end_row_index, start_col_index, end_col_index):
-    return [row[start_col_index:end_col_index] for row in matrix[start_row_index:end_row_index]]
+def select_submatrix(matrix, start_index, end_index, start_index, end_index):
+    return [row[start_index:end_index] for row in matrix[start_index:end_index]]
 
 data_matrix = [
     [1, 2, 3, 4, 5],
