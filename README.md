@@ -89,14 +89,8 @@ Python lists and C++ vectors are more flexible but come at the cost of higher me
 This experiment demonstrates that choosing between static and dynamic data structures involves a trade-off between memory efficiency and flexibility.
 
 # Task 4 Python
-## Flexibility:
-My solution is more flexible, because it allows the user to input the matrix dimensions and elements interactively. Chatgpt solution is less flexible as it gives a predefined matrix, focusing only on solution.
 
-## Readability:
-My solution is easier to understand for beginners due to loops and clear steps. In contrast, Chatgpt solution is more concise but uses list comprehensions which can reduce readability for those who are not  familiar with Python.
 
-## Efficiency:
-Chatgpt solution is more efficient, using Python’s built-in list slicing which is faster. My solution with nested loops is slower as it manually constructs the submatrix.
 
 # Task 4 C++
 ## Flexibility:
