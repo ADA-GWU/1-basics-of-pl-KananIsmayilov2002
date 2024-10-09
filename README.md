@@ -1,32 +1,13 @@
 # TASK 1
 ## Investigation of Endianness: Big Endian vs. Little Endian
 ## Introduction
-Endianness refers to the order in which bytes are arranged within larger data types when stored in computer memory. The two primary types of endianness are big-endian and little-endian. Understanding endianness is crucial for system programming, data serialization, and network communications, as it can affect data interpretation across different platforms and architectures.
+Endianness is a concept in computing that refers to the way bytes are ordered within larger data types, like integers or floating-point numbers, when stored in memory. There are two primary types of endianness: big-endian and little-endian
 
 ## Big Endian
-In a big-endian system, the most significant byte (the "big end") of a multi-byte data type is stored at the lowest memory address. For example, the hexadecimal value 0x12345678 would be stored in memory as:
+In big-endian format, the most significant byte is stored at the smallest memory address. For instance, if we have a 32-bit integer like 0x12345678, the byte 0x12 would be stored first, followed by 0x34, 0x56, and finally 0x78. This ordering feels intuitive to many because it mirrors how we read numbers, starting from the left (most significant) and moving to the right (least significant).
 
-Address    Value
-0x00       0x12
-0x01       0x34
-0x02       0x56
-0x03       0x78
-Big-endian is commonly used in network protocols and some computer architectures (like SPARC and PowerPC), making it the default format for data transmission over networks.
-
-## Advantages of Big Endian
-Human Readability: The order of bytes matches the way humans read numbers, which can simplify debugging and data interpretation.
-
-Network Standards: Many network protocols use big-endian, ensuring consistency when transmitting data across different systems.
 ## Little Endian
-In a little-endian system, the least significant byte (the "little end") is stored at the lowest memory address. Using the same example, the value 0x12345678 would be stored as:
-
-
-Address    Value
-0x00       0x78
-0x01       0x56
-0x02       0x34
-0x03       0x12
-Little-endian is the predominant format used by x86 and x86-64 architectures, which power most personal computers and servers today.
+On the other hand, little-endian reverses this order. Using the same example, 0x78 would be stored first, then 0x56, 0x34, and finally 0x12. The least significant byte comes first in memory. While this may seem counterintuitive at first, there are some benefits. Little-endian can make certain mathematical operations, particularly those involving low-order bytes, slightly more efficient. This is because the least significant parts are processed first, which can lead to faster performance in specific scenarios. Little-endian is the predominant format used by x86 and x86-64 architectures, which power most personal computers and servers today.
 
 ## Advantages of Little Endian
 Ease of Incrementing: Little-endian makes it easier to increment multi-byte values, as the least significant byte is accessed first.
@@ -106,3 +87,25 @@ C++ vector consumes 24 bytes, more than the array, due to the overhead for dynam
 In both Python and C++, static data structures (tuple and array) use less memory than dynamic ones (list and vector), as dynamic structures reserve extra memory to allow future changes.
 Python lists and C++ vectors are more flexible but come at the cost of higher memory consumption compared to tuples and arrays.
 This experiment demonstrates that choosing between static and dynamic data structures involves a trade-off between memory efficiency and flexibility.
+
+# Task 4 Python
+
+
+
+# Task 4 C++
+## Flexibility:
+My solution is more flexible because it allows the user to input the number of rows and columns of the matrix. It also takes user input for the row and column indices which makes it adaptable to different matrix sizes and slicing ranges. Chatgpt solution is less flexible because the row and column indices are fixed in the function call. It lacks the ability to handle user-defined input without modification.
+## Readability:
+The explicit use of loops to extract submatrices makes the code easier to understand for beginners. However, it is slightly longer because of manual iteration and input handling.
+Chatgpt solution is more concise due to the use of iterators which reduces the number of lines. However, it might be less readable for beginners who are unfamiliar with iterators.
+## Efficiency:
+By using iterators Chatgpt solution takes advantage of C++'s built-in capabilities which makes it faster. It avoids the overhead of manually constructing submatrices element-by-element by reducing unnecessary operations.
+
+
+
+
+
+
+
+
+
