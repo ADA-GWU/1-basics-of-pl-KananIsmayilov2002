@@ -88,6 +88,16 @@ In both Python and C++, static data structures (tuple and array) use less memory
 Python lists and C++ vectors are more flexible but come at the cost of higher memory consumption compared to tuples and arrays.
 This experiment demonstrates that choosing between static and dynamic data structures involves a trade-off between memory efficiency and flexibility.
 
+
+# Task 3 Python
+## Flexibility:
+My code manually handles matrix multiplication, making it adaptable to any list of lists representing a matrix. It doesn't require external libraries and allows you to work with matrices of any size.Chatgpt solution  provides numpy library which is flexible for matrix multiplication. However  this might be less flexible if you need to avoid external libraries or work in environments where installing libraries is not an option.
+## Readability:
+My code is relatively easy to follow if you understand how matrix multiplication works. The triple nested for loop structure clearly shows how each element of the resulting matrix is computed, but this can make the code look complex.Chatgpt use numpy solution which  is concise and highly readable for those familiar with the library.
+## Efficiency:
+ For large matrices my solution can become inefficient. NumPy approach is much faster because it leverages highly optimized, pre-compiled code for matrix operations.For large-scale computations numpy approach would be more efficient.
+ 
+
 # Task 4 Python
 ## Flexibility:
 My code is highly flexible because it allows user input for the matrix size and content and it provides input flexibility with the user specifying row and column indices, making it adaptable to different use cases. Chatgpt solution uses fixed matrix and can only operate on the predefined matrix, which reduces flexibility and the lack of user input makes it less dynamic compared to my solution.
